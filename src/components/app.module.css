@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+  }
+  
+  .leftsection {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 8em;
+  }
+  
+  .rightsection {
+    flex: 1;
+    
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: auto;
+
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; 
+    }
+    
+    .right-section {
+      margin-top: 20px; 
+    }
+  }
