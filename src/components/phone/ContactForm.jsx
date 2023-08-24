@@ -1,4 +1,3 @@
-
 import './phoneStyles.css'
 
 // import actions from '../../redux/contacts/contacts-actions';
@@ -10,28 +9,25 @@ import { addContact } from 'redux/contacts/contacts-operations';
 
 
 const ContactForm = () => {
-  // const [name, setName] = useState('');
-  // const [number, setNumber] = useState('');
 
   
   const contacts = useSelector(selectItems);
-  // const filterValue = useSelector(getFilter);
+
   const dispatch = useDispatch();
   
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    let contactForAdd = { name: form.name.value, phone: form.number.value };
-    console.log('Form ', contactForAdd);
-    if (contacts.some(({ name }) => name === contactForAdd.name)) {
-      alert(`${contactForAdd.name} is already in contacts`);
+    let contactAdd = { name: form.name.value, phone: form.number.value };
+    console.log('Form ', contactAdd);
+    if (contacts.some(({ name }) => name === contactAdd.name)) {
+      alert(`${contactAdd.name} is already in contacts`);
       return;
     }
-    dispatch(addContact(contactForAdd));
+    dispatch(addContact(contactAdd));
     form.reset();
 
-    // resetForm();
   };
 
     return (

@@ -11,17 +11,15 @@ import { setFilter } from 'redux/contacts/contacts-filter';
 const Filter = () => {
   // const filterValue = useSelector(getFilter);
   const dispatch = useDispatch();
-  const setFilterValue = event => {
-    dispatch(setFilter(event.currentTarget.value.toLowerCase()));
-  };
   
-  // const onChange = event => {
-  //   dispatch(actions.changeFilter(event.currentTarget.value));
-  // };
+  const onChange = event => {
+    dispatch(setFilter(event.currentTarget.value.toLowerCase()));
+    
+  };
   return(
   <div >
     <p>Find contacts<br></br> by name</p>
-    <input type="name"  onChange={setFilterValue} /> 
+    <input type="name"  onChange={onChange} /> 
     {/* value={filterValue} */}
   </div>
 )

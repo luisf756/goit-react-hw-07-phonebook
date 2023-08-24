@@ -40,14 +40,14 @@ button {
     margin-bottom: 10px;
     margin-left: 12px;
     align-items: center;
-    max-width: 320px;
+    max-width: 360px;
   }
 
   .ptrolio{
     align-items: center;
     display: flex;
     margin-left: 8px;
-    margin-right: 10px;
+    margin-right: 50px;
     width: 200px;
   }
 

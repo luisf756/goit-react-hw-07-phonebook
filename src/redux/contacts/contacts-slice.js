@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchContact, addContact, deleteContact } from "./contacts-operations";
 
 const contactsInitialState = {
-    items: [{"name":"Calvin Miller","number":"335-730-1353","id":"54"},{"name":"Margarita Homenick","number":"762-423-3607","id":"56"},{"name":"Silvia Rippin","number":"485-517-1130","id":"58"}],
+    items: [],
     isLoading: false,
     error: null,
 }
