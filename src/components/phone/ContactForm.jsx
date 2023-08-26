@@ -19,7 +19,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    let contactAdd = { name: form.name.value, phone: form.number.value };
+    let contactAdd = { name: form.name.value, phone: form.phone.value };
     console.log('Form ', contactAdd);
     if (contacts.some(({ name }) => name === contactAdd.name)) {
       alert(`${contactAdd.name} is already in contacts`);
@@ -47,10 +47,10 @@ const ContactForm = () => {
             />
             <p>Numero</p>
             <input
-              // value={number}
+              // value={phone}
               // onChange={handleChange}
               type="tel"
-              name="number"
+              name="phone"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
