@@ -24,7 +24,7 @@ export const addContact = createAsyncThunk(
               method: "POST",
               body: JSON.stringify({
                 name: contact.name,
-                number: contact.number  
+                phone: contact.phone  
               }),
               headers: {
                 "content-type": "application/json",
